@@ -810,3 +810,96 @@ h2 {
     }
 
 }
+
+
+/* ==============================
+   SCALLA CONTACT STRIP
+============================== */
+
+.scalla-contact-strip {
+    position: relative;
+    padding: 22px 0 45px;
+    background: #07162b;
+}
+
+.scalla-contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.scalla-contact-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-width: 0;
+    padding: 20px;
+    background: linear-gradient(
+        135deg,
+        #102846,
+        #0b1c34
+    );
+    border: 1px solid rgba(95, 165, 255, 0.2);
+    border-radius: 15px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.scalla-contact-card:hover {
+    transform: translateY(-5px);
+    border-color: #4b9cff;
+    box-shadow: 0 12px 35px rgba(0, 105, 255, 0.15);
+}
+
+.scalla-contact-symbol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background: rgba(42, 125, 255, 0.15);
+    color: #69b3ff;
+    font-size: 24px;
+}
+
+.scalla-contact-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    min-width: 0;
+}
+
+.scalla-contact-copy strong {
+    color: #fff;
+    font-size: 12px;
+    letter-spacing: 1.3px;
+}
+
+.scalla-contact-copy > span {
+    color: #b7cbe5;
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+.scalla-contact-arrow {
+    margin-left: auto;
+    color: #69b3ff;
+    font-size: 20px;
+    transition: transform 0.3s;
+}
+
+.scalla-contact-card:hover .scalla-contact-arrow {
+    transform: translate(3px, -3px);
+}
+
+@media (max-width: 991px) {
+    .scalla-contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .scalla-contact-card {
+        padding: 16px 18px;
+    }
+}

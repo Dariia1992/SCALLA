@@ -378,19 +378,20 @@
 
 <!-- ================= CONTACT ================= -->
 
+
+
 <section id="contacts" class="contact-section">
 
     <div class="contact-image">
-
         <img
             src="{% static 'services/images/contact-globe.png' %}"
             alt="Global IT Network"
         >
-
     </div>
 
     <div class="container contact-layout">
 
+        <!-- LEFT: TEXT -->
         <div class="contact-text">
 
             <span class="section-label">
@@ -410,10 +411,10 @@
 
         </div>
 
+        <!-- RIGHT: FORM -->
         <div class="contact-form">
 
             <form method="post">
-
                 {% csrf_token %}
 
                 <div class="row g-2">
@@ -458,7 +459,6 @@
                     </div>
 
                 </div>
-
             </form>
 
         </div>
@@ -466,5 +466,63 @@
     </div>
 
 </section>
+
+<!-- CONTACT DETAILS: SEPARATE STRIP -->
+<div class="scalla-contact-strip">
+
+    <div class="container">
+
+        <div class="scalla-contact-grid">
+
+            <a href="tel:+972501234567"
+               class="scalla-contact-card">
+
+                <span class="scalla-contact-symbol">☎</span>
+
+                <span class="scalla-contact-copy">
+                    <strong>CALL US</strong>
+                    <span>+972 50-123-4567</span>
+                </span>
+
+                <span class="scalla-contact-arrow">↗</span>
+
+            </a>
+
+            <a href="mailto:info@example.com"
+               class="scalla-contact-card">
+
+                <span class="scalla-contact-symbol">✉</span>
+
+                <span class="scalla-contact-copy">
+                    <strong>EMAIL US</strong>
+                    <span>info@example.com</span>
+                </span>
+
+                <span class="scalla-contact-arrow">↗</span>
+
+            </a>
+
+            <a href="https://wa.me/972501234567"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="scalla-contact-card">
+
+                <span class="scalla-contact-symbol">✆</span>
+
+                <span class="scalla-contact-copy">
+                    <strong>WHATSAPP</strong>
+                    <span>Chat with our team</span>
+                </span>
+
+                <span class="scalla-contact-arrow">↗</span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
 
 {% endblock %}
