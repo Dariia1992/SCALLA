@@ -10,7 +10,7 @@
 
     <title>SCALLA | IT Solutions</title>
 
-    <!-- Bootstrap -->
+    <!-- Bootstrap CSS -->
     <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
         rel="stylesheet"
@@ -19,24 +19,24 @@
     <!-- Custom CSS -->
     <link
         rel="stylesheet"
-        href="{% static 'services/css/custom.css' %}"
+        href="{% static 'services/css/custom.css' %}?v=10"
     >
 </head>
 
 <body>
 
-    <!-- HEADER -->
+    <!-- ================= HEADER ================= -->
     <header class="scalla-header">
 
         <nav class="container scalla-nav">
 
-            <!-- Logo -->
+            <!-- Логотип -->
             <a href="{% url 'home' %}" class="scalla-logo">
                 <span class="logo-symbol">◢</span>
                 SCALLA
             </a>
 
-            <!-- Navigation -->
+            <!-- Навигация -->
             <ul class="scalla-menu">
 
                 <li>
@@ -71,7 +71,7 @@
 
             </ul>
 
-            <!-- Contact button -->
+            <!-- Кнопка связи -->
             <a
                 href="{% url 'home' %}#contacts"
                 class="scalla-btn nav-btn"
@@ -83,8 +83,7 @@
 
     </header>
 
-
-    <!-- PAGE CONTENT -->
+    <!-- ================= PAGE CONTENT ================= -->
     <main>
 
         {% block content %}
@@ -92,8 +91,7 @@
 
     </main>
 
-
-    <!-- FOOTER -->
+    <!-- ================= FOOTER ================= -->
     <footer class="scalla-footer">
 
         <div class="container">
@@ -101,6 +99,11 @@
         </div>
 
     </footer>
+
+    <!-- ================= BOOTSTRAP JS ================= -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
 
 </body>
 </html>
