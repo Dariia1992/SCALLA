@@ -511,6 +511,7 @@
 
 <!-- ================= CONTACT ================= -->
 
+
 <section id="contacts" class="contact-section">
 
     <div class="contact-image">
@@ -543,7 +544,15 @@
 
         <div class="contact-form">
 
-            <form method="post">
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-{{ message.tags }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+
+            <form method="post" action="{% url 'home' %}">
                 {% csrf_token %}
 
                 <div class="row g-2">
@@ -554,11 +563,23 @@
                             name="name"
                             class="form-control"
                             placeholder="Your Name"
+                            maxlength="100"
                             required
                         >
                     </div>
 
                     <div class="col-md-6">
+                        <input
+                            type="tel"
+                            name="phone"
+                            class="form-control"
+                            placeholder="Your Phone Number"
+                            maxlength="20"
+                            required
+                        >
+                    </div>
+
+                    <div class="col-12">
                         <input
                             type="email"
                             name="email"
@@ -600,54 +621,34 @@
 
 <!-- ================= CONTACT DETAILS ================= -->
 
-<div class="scalla-contact-strip">
 
+<!-- CONTACT DETAILS -->
+<div class="scalla-contact-strip">
     <div class="container">
 
         <div class="scalla-contact-grid">
 
-            <!-- Phone -->
-            <a
-                href="tel:+972501234567"
-                class="scalla-contact-card"
-            >
+            <a href="tel:+972542329723"
+               class="scalla-contact-card">
+
                 <span class="scalla-contact-symbol">☎</span>
 
                 <span class="scalla-contact-copy">
                     <strong>CALL US</strong>
-                    <span>+972 50-123-4567</span>
+                    <span>+972 54-232-9723</span>
                 </span>
 
                 <span class="scalla-contact-arrow">↗</span>
             </a>
 
-            <!-- Email -->
-            <a
-                href="mailto:info@example.com"
-                class="scalla-contact-card"
-            >
+            <a href="mailto:maksim@scalla.net"
+               class="scalla-contact-card">
+
                 <span class="scalla-contact-symbol">✉</span>
 
                 <span class="scalla-contact-copy">
                     <strong>EMAIL US</strong>
-                    <span>info@example.com</span>
-                </span>
-
-                <span class="scalla-contact-arrow">↗</span>
-            </a>
-
-            <!-- WhatsApp -->
-            <a
-                href="https://wa.me/972501234567"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="scalla-contact-card"
-            >
-                <span class="scalla-contact-symbol">✆</span>
-
-                <span class="scalla-contact-copy">
-                    <strong>WHATSAPP</strong>
-                    <span>Chat with our team</span>
+                    <span>maksim@scalla.net</span>
                 </span>
 
                 <span class="scalla-contact-arrow">↗</span>
@@ -656,7 +657,8 @@
         </div>
 
     </div>
-
 </div>
+
+
 
 {% endblock %}

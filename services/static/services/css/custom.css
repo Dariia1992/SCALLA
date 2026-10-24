@@ -998,3 +998,76 @@ h2 {
 }
 
 
+/* PREMIUM CONTACT BAR */
+
+.scalla-contact-strip {
+    padding: 20px 0 28px;
+    background: #07162b;
+}
+
+.scalla-contact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0;
+    max-width: 950px;
+    margin: 0 auto;
+    background: #102846;
+    border: 1px solid rgba(95,165,255,0.22);
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.scalla-contact-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 22px 28px;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    min-width: 0;
+}
+
+.scalla-contact-card:first-child {
+    border-right: 1px solid rgba(150,190,235,0.2);
+}
+
+.scalla-contact-card:hover {
+    background: rgba(70,145,255,0.09);
+    transform: none;
+    box-shadow: none;
+    border-color: rgba(150,190,235,0.2);
+}
+
+.scalla-contact-symbol {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+}
+
+.scalla-contact-copy strong {
+    font-size: 11px;
+}
+
+.scalla-contact-copy > span {
+    font-size: 13px;
+}
+
+@media (max-width: 767px) {
+    .scalla-contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .scalla-contact-card {
+        padding: 18px;
+    }
+
+    .scalla-contact-card:first-child {
+        border-right: none;
+        border-bottom: 1px solid rgba(150,190,235,0.2);
+    }
+}
+
+
+
