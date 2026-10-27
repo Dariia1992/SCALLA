@@ -100,3 +100,7 @@ def home(request):
 
     # Открываем главную страницу
     return render(request, "services/home.html")
+
+
+def privacy_policy(request):
+    return render(request, "services/privacy_policy.html")
