@@ -9,6 +9,7 @@ from django.core.mail import send_mail
 from django.conf import settings
 
 from .models import ContactRequest
+from .forms import ContactRequestForm
 
 
 logger = logging.getLogger(__name__)
@@ -17,6 +18,9 @@ logger = logging.getLogger(__name__)
 def home(request):
 
     if request.method == "POST":
+        form = ContactRequestForm(request.POST)
+        if form.is_valid():
+            contact = form.save()
 
         # Получаем данные из формы
         name = request.POST.get("name", "").strip()

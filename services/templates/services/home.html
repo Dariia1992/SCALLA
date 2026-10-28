@@ -507,7 +507,14 @@
     </div>
 
 </section>
+<!-- ================= Form ================= -->
+<section id="work" class="work-section">
 
+    <div class="container process-layout">
+{% include "services/form.html" %}
+
+    </div>
+</section>
 
 <!-- ================= CONTACT ================= -->
 
@@ -542,82 +549,7 @@
 
         </div>
 
-        <div class="contact-form">
-
-            {% if messages %}
-                {% for message in messages %}
-                    <div class="alert alert-{{ message.tags }}">
-                        {{ message }}
-                    </div>
-                {% endfor %}
-            {% endif %}
-
-            <form method="post" action="{% url 'home' %}">
-                {% csrf_token %}
-
-                <div class="row g-2">
-
-                    <div class="col-md-6">
-                        <input
-                            type="text"
-                            name="name"
-                            class="form-control"
-                            placeholder="Your Name"
-                            maxlength="100"
-                            required
-                        >
-                    </div>
-
-                    <div class="col-md-6">
-                        <input
-                            type="tel"
-                            name="phone"
-                            class="form-control"
-                            placeholder="Your Phone Number"
-                            maxlength="20"
-                            required
-                        >
-                    </div>
-
-                    <div class="col-12">
-                        <input
-                            type="email"
-                            name="email"
-                            class="form-control"
-                            placeholder="Your Email"
-                            required
-                        >
-                    </div>
-
-                    <div class="col-md-9">
-                        <textarea
-                            name="message"
-                            class="form-control"
-                            rows="3"
-                            placeholder="Your Message"
-                            required
-                        ></textarea>
-                    </div>
-
-                    <div class="col-md-3 d-flex align-items-end">
-                        <button
-                            type="submit"
-                            class="scalla-btn w-100"
-                        >
-                            Send →
-                        </button>
-                    </div>
-
-                </div>
-
-            </form>
-
-        </div>
-
-    </div>
-
-</section>
-
+        
 
 <!-- ================= CONTACT DETAILS ================= -->
 
